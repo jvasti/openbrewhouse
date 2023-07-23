@@ -1,5 +1,8 @@
+#General
 .DS_Store
+#npm
 node_modules
+#Build
 /build
 /.svelte-kit
 /package
@@ -8,5 +11,8 @@ node_modules
 !.env.example
 .vercel
 .output
+#Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+#SST
+.sst
