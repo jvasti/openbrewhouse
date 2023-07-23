@@ -5,7 +5,8 @@ export default {
   config(_input) {
     return {
       name: "openbrewhouse",
-      region: "us-east-1",
+      region: "eu-north-1",
+      profile: "openbrewhouse-dev"
     };
   },
   stacks(app) {
