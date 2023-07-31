@@ -12,6 +12,7 @@
     "format": "prettier --plugin-search-dir . --write .",
     "test:integration": "playwright test",
     "test:unit": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "sst:deploy": "sst deploy",
     "sst:dev": "sst dev"
   },
