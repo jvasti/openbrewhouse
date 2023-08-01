@@ -23,5 +23,13 @@ jobs:
         run: npm run check
       - name: Run unit tests with coverage
         run: npm run test:coverage
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
       - name: Run playwright tests
         run: npm run test:integration
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 30
