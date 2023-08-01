@@ -2,7 +2,7 @@ import type { SSTConfig } from 'sst';
 import { SvelteKitSite } from 'sst/constructs';
 
 export default {
-	config(_input) {
+	config() {
 		return {
 			name: 'openbrewhouse',
 			region: 'eu-north-1',
