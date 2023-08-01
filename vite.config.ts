@@ -6,7 +6,7 @@ export default defineConfig({
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}'],
 		coverage: {
-			provider: "v8",
+			provider: 'v8',
 			lines: 100,
 			branches: 100,
 			functions: 100,
