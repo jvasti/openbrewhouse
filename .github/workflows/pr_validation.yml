@@ -4,6 +4,7 @@ on:
   pull_request:
     branches:
       - main # the branch on which PRs are merged
+      - dev
 
 jobs:
   build:
