@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Check if the 'bun' command is available
+if command -v bun &> /dev/null; then
+  echo "Running lint with bun..."
+  bun run lint
+else
+  echo "Running lint with npm..."
+  npm run lint
+fi
