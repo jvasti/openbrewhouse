@@ -5,5 +5,15 @@
 	"baseBranches": ["dev"],
 	"lockFileMaintenance": { "enabled": true },
 	"automerge": true,
-	"automergeType": "pr"
+	"automergeType": "pr",
+	"packageRules": [
+		{
+			"matchPackagePatterns": ["^eslint"],
+			"groupName": "eslint packages"
+		},
+		{
+			"matchPackagePatterns": ["^prettier"],
+			"groupName": "prettier packages"
+		}
+	]
 }
