@@ -14,7 +14,8 @@
 		"test:unit": "vitest run",
 		"test:coverage": "vitest run --coverage",
 		"sst:deploy": "sst deploy",
-		"sst:dev": "sst dev"
+		"sst:dev": "sst dev",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
 		"@fontsource/fira-mono": "5.0.8",
@@ -43,5 +44,12 @@
 		"vite": "4.4.9",
 		"vitest": "0.34.3"
 	},
-	"type": "module"
+	"type": "module",
+	"husky": {
+		"hooks": {
+			"post-checkout": "sh .husky/check-npm.sh",
+			"post-rewrite": "sh .husky/check-npm.sh",
+			"pre-commit": "npm run lint"
+		}
+	}
 }
