@@ -3,7 +3,7 @@
 	<meta name="description" content="Openbrewhouse" />
 </svelte:head>
 
-<section>
+<div class="container mx-auto p-8 space-y-8 text-justify">
 	<h1>Openbrewhouse WIP</h1>
 	<p>
 		Now what are the possibilities of warp drive? Cmdr Riker's nervous system has been invaded by an
@@ -36,16 +36,4 @@
 		power-wave-guide conduits which allow them to work collectively as they perform ship functions.
 		Increase deflector modulation to upper frequency band.
 	</p>
-</section>
-
-<style>
-	h1 {
-		text-align: center;
-	}
-	p {
-		width: 400px;
-		margin: auto;
-		margin: 0 auto;
-		padding-bottom: 16px;
-	}
-</style>
+</div>
