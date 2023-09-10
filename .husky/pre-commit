@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FILES=$(git diff --cached --name-only --diff-filter=d | grep -E '\.(js|ts|jsx|tsx|svelte|cjs|html|postcss|json)$')
+FILES=$(git diff --cached --name-only --diff-filter=d | grep -E '\.(js|ts|jsx|tsx|svelte|cjs|postcss|json)$')
 # If no files found, just exit
 [ -z "$FILES" ] && exit 0
 
@@ -18,10 +18,20 @@ fi
 # Run linters
 
 $CMD prettier --check $FILES
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+
+# Run eslint and exit if it fails
 $CMD eslint $FILES
+if [ $? -ne 0 ]; then
+    exit 1
+fi
 
-#Run unit tests
-
+# Run unit tests and exit if they fail
 $CMD vitest run
+if [ $? -ne 0 ]; then
+    exit 1
+fi
 
-exit $?
+exit 0
