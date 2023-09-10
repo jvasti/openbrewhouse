@@ -1,10 +1,27 @@
 #!/bin/bash
 
-# Check if the 'bun' command is available
+FILES=$(git diff --cached --name-only --diff-filter=d | grep -E '\.(js|ts|jsx|tsx|svelte|cjs|html|postcss|json)$')
+# If no files found, just exit
+[ -z "$FILES" ] && exit 0
+
+echo $FILES
+
+# Check if the 'bun' command is available and set the CMD variable accordingly
 if command -v bun &> /dev/null; then
-  echo "Running lint with bun..."
-  bun run lint
+    echo "Running linters with bun..."
+    CMD="bunx"
 else
-  echo "Running lint with npm..."
-  npm run lint
+    echo "Running linters with npm..."
+    CMD="npx"
 fi
+
+# Run linters
+
+$CMD prettier --check $FILES
+$CMD eslint $FILES
+
+#Run unit tests
+
+$CMD vitest run
+
+exit $?
