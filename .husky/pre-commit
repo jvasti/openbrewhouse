@@ -1,31 +1,44 @@
-#!/bin/bash
 
 FILES=$(git diff --cached --name-only --diff-filter=d | grep -E '\.(js|ts|jsx|tsx|svelte|cjs|postcss|json)$')
-# If no files found, just exit
-[ -z "$FILES" ] && exit 0
 
-echo $FILES
+#!/bin/bash
+
+# Store all modified files
+MODIFIED_FILES=$(git diff --cached --name-only --diff-filter=d)
+
+# If no files found, just exit
+[ -z "$MODIFIED_FILES" ] && exit 0
+
+# Files for prettier
+PRETTIER_FILES=$(grep -E '\.(js|ts|jsx|tsx|svelte|cjs|postcss|json|yml|html)$' <<< "$MODIFIED_FILES")
+# Files for eslint
+ESLINT_FILES=$(grep -E '\.(js|ts|cjs|svelte|jsx|tsx)$' <<< "$MODIFIED_FILES")
 
 # Check if the 'bun' command is available and set the CMD variable accordingly
 if command -v bun &> /dev/null; then
-    echo "Running linters with bun..."
+    echo "Using bun..."
     CMD="bunx"
 else
-    echo "Running linters with npm..."
+    echo "Using node..."
     CMD="npx"
 fi
 
-# Run linters
-
-$CMD prettier --check $FILES
-if [ $? -ne 0 ]; then
-    exit 1
+# Run prettier if there are target files for it
+if [ ! -z "$PRETTIER_FILES" ]; then
+    echo "Prettier target files: $PRETTIER_FILES"
+    $CMD prettier --check $PRETTIER_FILES
+    if [ $? -ne 0 ]; then
+        exit 1
+    fi
 fi
 
-# Run eslint and exit if it fails
-$CMD eslint $FILES
-if [ $? -ne 0 ]; then
-    exit 1
+# Run eslint if there are target files for it
+if [ ! -z "$ESLINT_FILES" ]; then
+    echo "ESLint target files: $ESLINT_FILES"
+    $CMD eslint $ESLINT_FILES
+    if [ $? -ne 0 ]; then
+        exit 1
+    fi
 fi
 
 # Run unit tests and exit if they fail
