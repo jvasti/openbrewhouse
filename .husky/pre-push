@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Check if the 'bun' command is available and set the CMD variable accordingly
+if command -v bun &> /dev/null; then
+    echo "Using bun..."
+    CMD="bun"
+    CMD_EXEC="bunx"
+else
+    echo "Using npm..."
+    CMD="npm"
+    CMD_EXEC="npx"
+fi
+
+#Run linters
+$CMD run lint
+$CMD run check
+#Run unit and playwright tests
+$CMD run test
+
+exit $?
