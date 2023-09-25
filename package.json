@@ -31,7 +31,7 @@
 		"@typescript-eslint/parser": "6.7.2",
 		"@vitest/coverage-v8": "0.34.5",
 		"autoprefixer": "10.4.16",
-		"aws-cdk-lib": "2.96.2",
+		"aws-cdk-lib": "2.97.0",
 		"constructs": "10.2.70",
 		"eslint": "8.49.0",
 		"eslint-config-prettier": "9.0.0",
