@@ -35,7 +35,7 @@
 		"constructs": "10.2.70",
 		"eslint": "8.50.0",
 		"eslint-config-prettier": "9.0.0",
-		"eslint-plugin-svelte": "2.33.2",
+		"eslint-plugin-svelte": "2.34.0",
 		"husky": "8.0.3",
 		"postcss": "8.4.31",
 		"postcss-load-config": "4.0.1",
