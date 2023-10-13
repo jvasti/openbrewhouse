@@ -22,7 +22,7 @@
 		"@neoconfetti/svelte": "1.0.0",
 		"@playwright/test": "1.38.1",
 		"@skeletonlabs/skeleton": "2.2.0",
-		"@skeletonlabs/tw-plugin": "0.2.1",
+		"@skeletonlabs/tw-plugin": "0.2.2",
 		"@sveltejs/adapter-auto": "2.1.0",
 		"@sveltejs/kit": "1.25.2",
 		"@types/cookie": "0.5.2",
