@@ -20,7 +20,7 @@
 	"devDependencies": {
 		"@fontsource/fira-mono": "5.0.8",
 		"@neoconfetti/svelte": "1.0.0",
-		"@playwright/test": "1.38.1",
+		"@playwright/test": "1.39.0",
 		"@skeletonlabs/skeleton": "2.3.0",
 		"@skeletonlabs/tw-plugin": "0.2.2",
 		"@sveltejs/adapter-auto": "2.1.0",
