@@ -7,7 +7,8 @@ const config: PlaywrightTestConfig = {
 		reuseExistingServer: !process.env.CI
 	},
 	testDir: 'tests',
-	testMatch: /(.+\.)?(test|spec)\.[jt]s/
+	testMatch: /(.+\.)?(test|spec)\.[jt]s/,
+	reporter: process.env.CI ? [['github'], ['dot'], ['html']] : 'list'
 };
 
 export default config;
