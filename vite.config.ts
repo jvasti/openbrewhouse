@@ -4,6 +4,8 @@ import { defineConfig } from 'vitest/config';
 export default defineConfig({
 	plugins: [sveltekit()],
 	test: {
+		environment: 'happy-dom',
+		setupFiles: ['./vitest-setup.js'],
 		include: ['src/**/*.{test,spec}.{js,ts}'],
 		coverage: {
 			provider: 'v8',
