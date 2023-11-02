@@ -18,3 +18,5 @@ vite.config.ts.timestamp-*
 /coverage
 #SST
 .sst
+#Playwright
+playwright-report
