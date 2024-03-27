@@ -32,7 +32,7 @@
 		"@types/node": "20.11.30",
 		"@typescript-eslint/eslint-plugin": "7.3.1",
 		"@typescript-eslint/parser": "7.3.1",
-		"@vitest/coverage-v8": "0.34.6",
+		"@vitest/coverage-v8": "1.4.0",
 		"autoprefixer": "10.4.19",
 		"aws-cdk-lib": "2.133.0",
 		"constructs": "10.3.0",
@@ -54,7 +54,7 @@
 		"tslib": "2.6.2",
 		"typescript": "5.4.3",
 		"vite": "4.5.3",
-		"vitest": "0.34.6"
+		"vitest": "1.4.0"
 	},
 	"type": "module"
 }
