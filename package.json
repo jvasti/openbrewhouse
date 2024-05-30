@@ -19,7 +19,7 @@
 	},
 	"devDependencies": {
 		"@fontsource/fira-mono": "5.0.13",
-		"@happy-dom/global-registrator": "14.11.0",
+		"@happy-dom/global-registrator": "14.11.1",
 		"@neoconfetti/svelte": "2.2.1",
 		"@playwright/test": "1.44.1",
 		"@skeletonlabs/skeleton": "2.10.0",
