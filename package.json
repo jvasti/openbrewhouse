@@ -18,7 +18,7 @@
 		"prepare": "husky install"
 	},
 	"devDependencies": {
-		"@fontsource/fira-mono": "5.0.13",
+		"@fontsource/fira-mono": "5.0.14",
 		"@happy-dom/global-registrator": "14.12.3",
 		"@neoconfetti/svelte": "2.2.1",
 		"@playwright/test": "1.46.1",
