@@ -45,7 +45,7 @@
 		"postcss-load-config": "6.0.1",
 		"prettier": "3.3.3",
 		"prettier-plugin-svelte": "3.2.6",
-		"sst": "3.1.30",
+		"sst": "3.1.36",
 		"svelte": "4.2.19",
 		"svelte-check": "4.0.2",
 		"svelte-kit-sst": "2.43.5",
