@@ -23,7 +23,7 @@
 		"@neoconfetti/svelte": "2.2.1",
 		"@playwright/test": "1.50.0",
 		"@skeletonlabs/skeleton": "2.10.4",
-		"@skeletonlabs/tw-plugin": "0.4.0",
+		"@skeletonlabs/tw-plugin": "0.4.1",
 		"@sveltejs/adapter-auto": "2.1.1",
 		"@sveltejs/kit": "1.30.4",
 		"@testing-library/jest-dom": "6.6.3",
