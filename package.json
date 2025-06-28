@@ -21,7 +21,7 @@
 		"@fontsource/fira-mono": "5.2.6",
 		"@happy-dom/global-registrator": "17.5.6",
 		"@neoconfetti/svelte": "2.2.2",
-		"@playwright/test": "1.52.0",
+		"@playwright/test": "1.53.1",
 		"@skeletonlabs/skeleton": "2.11.0",
 		"@skeletonlabs/tw-plugin": "0.4.1",
 		"@sveltejs/adapter-auto": "2.1.1",
